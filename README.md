@@ -33,8 +33,8 @@ Setup
 	* Follow the steps described in ["Configuring the job"](#Step2) 
 * Replace the content of Program.cs file with the code described in step ["Configuring Windows Service"](#Step3)
 * Configure the jobs logging as describe in ["Configuring the logging"](#Step4)
-* Installing Windows Service as describe in ["Installing Windows Service"](#Step5)
-* To run the application follow the steps described in ["Running"](#Step6)
+* Install Windows Service as describe in ["Installing Windows Service"](#Step5)
+* Run the application follow the steps described in ["Running"](#Step6)
 
 <a name="Step1">Creating a job</a>
 ===
@@ -136,6 +136,7 @@ FAQ
 Having troubles? 
  
 - Ask on [Stack Overflow](http://stackoverflow.com/search?q=JobSharp)
+- Do you need help to understand your crontab expression? Try [CrowWTF](http://cronwtf.github.io/).
 
 Roadmap
 -------- 
