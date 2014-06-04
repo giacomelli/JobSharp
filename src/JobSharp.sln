@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSharp", "JobSharp\JobSharp.csproj", "{55B3679A-D226-431B-9491-F6EA0A1A6978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSharp.Sample", "JobSharp.Sample\JobSharp.Sample.csproj", "{9E74092C-CE40-4D25-9C4D-496162066249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSharp.UnitTests", "JobSharp.UnitTests\JobSharp.UnitTests.csproj", "{A2BF9378-1B8C-4A24-8EB3-7846763F650E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobSharp.FunctionalTests", "JobSharp.FunctionalTests\JobSharp.FunctionalTests.csproj", "{1A56F4C2-1982-415E-A392-146B10C10D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55B3679A-D226-431B-9491-F6EA0A1A6978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B3679A-D226-431B-9491-F6EA0A1A6978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B3679A-D226-431B-9491-F6EA0A1A6978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B3679A-D226-431B-9491-F6EA0A1A6978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E74092C-CE40-4D25-9C4D-496162066249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E74092C-CE40-4D25-9C4D-496162066249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E74092C-CE40-4D25-9C4D-496162066249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E74092C-CE40-4D25-9C4D-496162066249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BF9378-1B8C-4A24-8EB3-7846763F650E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BF9378-1B8C-4A24-8EB3-7846763F650E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BF9378-1B8C-4A24-8EB3-7846763F650E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BF9378-1B8C-4A24-8EB3-7846763F650E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A56F4C2-1982-415E-A392-146B10C10D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A56F4C2-1982-415E-A392-146B10C10D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A56F4C2-1982-415E-A392-146B10C10D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A56F4C2-1982-415E-A392-146B10C10D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = JobSharp.Sample\JobSharp.Sample.csproj
+	EndGlobalSection
+EndGlobal

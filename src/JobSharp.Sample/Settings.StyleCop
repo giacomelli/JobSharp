@@ -1,0 +1,5 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <StringProperty Name="Culture">en-US</StringProperty>
+  </GlobalSettings>
+</StyleCopSettings>
