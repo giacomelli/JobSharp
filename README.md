@@ -10,12 +10,12 @@ Features
  - Individual jobs scheduling using Crontab expressions.
  - Easy selection of what jobs run in each Windows Service instance.
  - Fault Tolerant. An failure in a job will not affect the others jobs running.
- - Auto discovering jobs. Just implement IJob interface and your job will be discovered. 
+ - Auto discovering jobs. Just implement [IJob](src/JobSharp/IJob.cs) interface and your job will be discovered. 
  - Easy installation and command-line via [Topshelf](https://github.com/phatboyg/Topshelf).
  - Run a specific job via -job:&lt;job name&gt; command-line option.
  - Fully tested on Windows.
  - Working on Visual Studio and Xamarin Studio.
- - Unit tests and functional tests.
+ - [Unit tests](src/JobSharp.UnitTests) and [functional tests](src/JobSharp.FunctionalTests) .
  - 100% code documentation.
  - FxCop and StyleCop validated.
  - Good (and well used) design patterns.  
@@ -31,7 +31,10 @@ Setup
 * Add an "Application Configuration File" (app.config) to your project.
 	* Add the key &lt;add key="JobSharp:CronTab" value="1000" /&gt; to the appSettings section.
 	* Follow the steps described in ["Configuring the job"](#Step2) 
-* Replace the content of Program.cs file with the code described in step ["Configuring, installing and running your Windows Service"](#Step3)
+* Replace the content of Program.cs file with the code described in step ["Configuring Windows Service"](#Step3)
+* Configure the jobs logging as describe in ["Configuring the logging"](#Step4)
+* Installing Windows Service as describe in ["Installing Windows Service"](#Step5)
+* To run the application follow the steps described in ["Running"](#Step6)
 
 <a name="Step1">Creating a job</a>
 ===
@@ -51,14 +54,14 @@ class MyFirstJob : IJob
 <a name="Step2">Configuring the job</a>
 ===
 
-Add your new job to enabled jobs to the appSettings section (use comma to add more jobs).
+Add your new job "JobSharp:Jobs" key in the appSettings section (use comma to add more jobs):
 ```xml
 
 <add key="JobSharp:Jobs" value="MyFirstJob" />
 
 ```
 
-Define when the job must run.
+Define when the job must run:
 ```xml
 
 <add key="MyFirstJob:Crontab" value="*/2 * * * *" />
@@ -71,7 +74,7 @@ This configuration will make the job runs every 2 minutes.
 <a name="Step3">Configuring Windows Service</a>
 ===
 
-Replace the content of the file Program.cs.
+Replace the content of the file Program.cs:
 
 ```csharp
 using JobSharp;
@@ -100,7 +103,7 @@ class Program
 ```
 
 
-Configuring the logging
+<a name="Step4">Configuring the logging</a>
 ===
 The default configuration use Log4net as the log strategy.
 
@@ -109,11 +112,11 @@ To configure log4net take a look on JobSharp.Sample's [App.config](src/JobSharp.
 If Log4net does not meet what you need, I doubt ;), you can implement your own ILogStrategy and inject it on WindowsService.Install method call. 
 
 
-<a name="Step4">Installing Windows Service</a>
+<a name="Step5">Installing Windows Service</a>
 ===
 Open a prompt window on directory with your console application .exe file and type: &lt;your console application name&gt;.exe install
 
-<a name="Step4">Running</a>
+<a name="Step6">Running</a>
 ===
 You can run it as a Windows Service or just as a command-line.
 
