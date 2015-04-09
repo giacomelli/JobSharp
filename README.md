@@ -160,4 +160,5 @@ In others words, you can use this library for developement any kind of software:
 
 Change Log
 ======
+ - 0.5.4 HelperSharp updated.
  - 0.5.3 First version.
