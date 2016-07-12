@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>JobSharp</id>
+        <version>0.6.0</version>
+        <title>JobSharp</title>
+        <authors>g1acomell1</authors>
+        <owners>g1acomell1</owners>
+        <projectUrl>https://github.com/giacomelli/JobSharp</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>An easy-to-use jobs runner.
+
+Create your Windows Service jobs runner in a few minutes.</description>
+        <summary>An easy-to-use jobs runner.</summary>
+        <releaseNotes>Use .NET 4.0 since it doesn't depend on .NET 4.5</releaseNotes>
+        <tags>WindowsService job background</tags>
+        <dependencies>
+            <dependency id="ncrontab" version="1.0.0" />
+            <dependency id="Topshelf" version="3.1.3" />
+            <dependency id="HelperSharp" version="0.0.4.2" />
+            <dependency id="Skahal.Infrastructure.Framework" version="0.6.5" />
+            <dependency id="Skahal.Infrastructure.Logging.Log4net" version="1.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\JobSharp\bin\Debug\JobSharp.dll" target="lib\net40\JobSharp.dll" />
+        <file src="..\JobSharp\bin\Debug\JobSharp.pdb" target="lib\net40\JobSharp.pdb" />
+        <file src="..\JobSharp\bin\Debug\JobSharp.xml" target="lib\net40\JobSharp.xml" />
+        <file src="..\JobSharp\bin\Debug\JobSharp.dll" target="lib\net45\JobSharp.dll" />
+        <file src="..\JobSharp\bin\Debug\JobSharp.pdb" target="lib\net45\JobSharp.pdb" />
+        <file src="..\JobSharp\bin\Debug\JobSharp.xml" target="lib\net45\JobSharp.xml" />
+    </files>
+</package>

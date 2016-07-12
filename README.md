@@ -1,5 +1,7 @@
 JobSharp
 ======
+[![NuGet](https://img.shields.io/nuget/v/JobSharp.svg?maxAge=2592000)](https://www.nuget.org/packages/JobSharp)
+[![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/JobSharp/master/LICENSE)
 
 An easy-to-use C# jobs runner.
 
@@ -156,9 +158,3 @@ License
 
 Licensed under the The MIT License (MIT).
 In others words, you can use this library for developement any kind of software: open source, commercial, proprietary and alien.
-
-
-Change Log
-======
- - 0.5.4 HelperSharp updated.
- - 0.5.3 First version.
