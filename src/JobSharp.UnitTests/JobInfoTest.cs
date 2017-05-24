@@ -72,7 +72,7 @@ namespace JobSharp.UnitTests
 		}
 
 		[Test ()]
-		public void RefreshNextExecution_CronttabExpression_NextDateTimeExecution ()
+		public void RefreshNextExecution_CrontabExpression_NextDateTimeExecution ()
 		{
 			var job = new StubOneJob ();
 			var crontabKey = "StubOneJob:Crontab";
@@ -91,6 +91,27 @@ namespace JobSharp.UnitTests
 			target.RefreshNextExecution (DateTime.Now.AddMinutes (2));
 			Assert.IsTrue (actual < target.NextExecution);
 		}
-	}
+
+        [Test()]
+        public void RefreshNextExecution_CrontabExpressionWithSeconds_NextDateTimeExecution()
+        {
+            var job = new StubOneJob();
+            var crontabKey = "StubOneJob:Crontab";
+            ConfigurationManager.AppSettings[crontabKey] = "* * * * * *";
+
+
+            var target = new JobInfo(job);
+            var actual = target.NextExecution;
+
+            target.RefreshNextExecution(DateTime.Now.AddMinutes(1));
+            Assert.IsTrue(actual < target.NextExecution);
+
+            actual = target.NextExecution;
+            Assert.IsTrue(actual == target.NextExecution);
+
+            target.RefreshNextExecution(DateTime.Now.AddMinutes(2));
+            Assert.IsTrue(actual < target.NextExecution);
+        }
+    }
 }
 

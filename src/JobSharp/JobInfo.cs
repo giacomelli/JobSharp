@@ -113,14 +113,32 @@ namespace JobSharp
 
             crontabExpression = TransfomLastDayOfMonth(crontabExpression);
 
+            try
+            {
+                m_crontab = ParseCrontab(crontabExpression);
+            }
+            catch(CrontabException ex)
+            {
+                throw new ConfigurationErrorsException("The crontab expression define at key '{0}' on app.config file is invalid. Error: {1}".With(crontabKey, ex.Message));
+            }            
+        }
+
+        private CrontabSchedule ParseCrontab(string crontabExpression)
+        {
             var result = CrontabSchedule.TryParse(crontabExpression);
 
-            if (result.IsError)
+            if (result == null)
             {
-                throw new ConfigurationErrorsException("The crontab expression define at key '{0}' on app.config file is invalid. Error: {1}".With(crontabKey, result.Error));
+                // Try using seconds option.
+                result = CrontabSchedule.TryParse(crontabExpression, new CrontabSchedule.ParseOptions { IncludingSeconds = true });
+
+                if (result == null)
+                {
+                    throw new CrontabException("Invalid crontab expression.");
+                }
             }
 
-            m_crontab = result.Value;
+            return result;         
         }
         #endregion
     }

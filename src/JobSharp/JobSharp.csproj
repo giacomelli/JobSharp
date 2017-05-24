@@ -37,8 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\HelperSharp.0.0.4.2\lib\net35\HelperSharp.dll</HintPath>
     </Reference>
-    <Reference Include="NCrontab">
-      <HintPath>..\packages\ncrontab.1.0.0\lib\NCrontab.dll</HintPath>
+    <Reference Include="NCrontab, Version=3.2.20120.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ncrontab.3.3.0\lib\net35\NCrontab.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Skahal.Infrastructure.Framework, Version=1.0.5576.19712, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
